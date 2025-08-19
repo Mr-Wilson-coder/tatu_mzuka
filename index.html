@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TatuMzuka - Turn Your Luck Into Fortune | Lucky Number Game</title>
+    <meta name="description" content="Turn your 2,309.91 BIF into 692,162.30 BIF in 30 minutes! Pick your 3 lucky numbers from 0-9 and win up to 300x your money. Draws every 30 minutes.">
+    <meta name="keywords" content="TatuMzuka, Lucky Numbers, Lottery, BIF, Win Money, LuminCash">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="crown" class="lucide-crown"></i>
+                    </div>
+                    <span class="logo-text">TatuMzuka</span>
+                    <div class="draw-timer-badge">
+                        <i data-lucide="clock" class="timer-icon"></i>
+                        <span>DRAW IN <span id="header-timer">11:39</span></span>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="nav-menu">
+                    <a href="#" class="nav-link active" onclick="switchTab('home')">HOME</a>
+                    <a href="#" class="nav-link" onclick="switchTab('how-to-play')">HOW TO PLAY</a>
+                    <a href="#" class="nav-link" onclick="switchTab('contact')">CONTACT</a>
+                    <a href="#" class="nav-link" onclick="switchTab('about')">ABOUT</a>
+                    <a href="#" class="nav-link" onclick="switchTab('winners')">WINNERS</a>
+                    <a href="#" class="nav-link" onclick="switchTab('results')">RESULTS</a>
+                    <a href="#" class="nav-link" onclick="switchTab('terms')">TERMS</a>
+                    <a href="#" class="nav-link nav-login" onclick="switchTab('login')">LOGIN</a>
+                    <a href="#" class="nav-link nav-signup" onclick="switchTab('signup')">SIGN UP</a>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                    <i data-lucide="x" id="close-icon" class="hidden"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav hidden" id="mobile-nav">
+                <a href="#" class="mobile-nav-link active" onclick="switchTab('home')">HOME</a>
+                <a href="#" class="mobile-nav-link" onclick="switchTab('how-to-play')">HOW TO PLAY</a>
+                <a href="#" class="mobile-nav-link" onclick="switchTab('contact')">CONTACT</a>
+                <a href="#" class="mobile-nav-link" onclick="switchTab('about')">ABOUT</a>
+                <a href="#" class="mobile-nav-link" onclick="switchTab('winners')">WINNERS</a>
+                <a href="#" class="mobile-nav-link" onclick="switchTab('results')">RESULTS</a>
+                <a href="#" class="mobile-nav-link" onclick="switchTab('terms')">TERMS</a>
+                <a href="#" class="mobile-nav-link" onclick="switchTab('login')">LOGIN</a>
+                <a href="#" class="mobile-nav-link" onclick="switchTab('signup')">SIGN UP</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- HOME TAB -->
+        <section class="tab-content active" id="tab-home">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-bg"></div>
+                <div class="container">
+                    <!-- Winner Banner -->
+                    <div class="winner-banner">
+                        <div class="winner-badge">
+                            <i data-lucide="trophy" class="trophy-icon"></i>
+                            <span>Join the 235 lucky people who have won in the last 24 hours!</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-content">
+                        <!-- Left Content -->
+                        <div class="hero-left">
+                            <div class="game-badge">
+                                <div class="game-number">3</div>
+                                <div class="game-label">
+                                    <span class="label-primary">LUCKY NUMBER</span>
+                                    <span class="label-secondary">GAME</span>
+                                </div>
+                            </div>
+
+                            <h1 class="hero-title">
+                                Turn your <span class="amount-from">2,309.91 BIF</span> into 
+                                <span class="amount-to">692,162.30 BIF</span> in 30 Minutes!
+                            </h1>
+
+                            <p class="hero-subtitle">
+                                Pick your 3 Lucky numbers from 0-9 to win 300x your Money
+                            </p>
+
+                            <!-- Stats -->
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">1-2-3!</div>
+                                    <div class="stat-label">Easy Steps</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">8.8B+</div>
+                                    <div class="stat-label">BIF Won</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">30min</div>
+                                    <div class="stat-label">Every Draw</div>
+                                </div>
+                            </div>
+
+                            <!-- Easy Steps Banner -->
+                            <div class="easy-steps-banner">
+                                <h3>It's as easy as 1-2-3! Over BIF 8,820,807,133 won so far!</h3>
+                                <div class="steps-indicators">
+                                    <div class="step-indicator">1</div>
+                                    <div class="step-line"></div>
+                                    <div class="step-indicator">2</div>
+                                    <div class="step-line"></div>
+                                    <div class="step-indicator">3</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Content - Game Interface -->
+                        <div class="hero-right">
+                            <div class="game-card">
+                                <div class="game-header">
+                                    <div class="draw-info">
+                                        <h3>DRAW EVERY 30 MINUTES</h3>
+                                        <div class="next-draw">
+                                            <i data-lucide="clock" class="clock-icon"></i>
+                                            <span>Next Draw: <span id="game-timer">11:39</span></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Phone Number Input -->
+                                <div class="phone-section">
+                                    <label class="input-label">Mobile Phone Number</label>
+                                    <div class="phone-input-wrapper">
+                                        <span class="country-code">+257</span>
+                                        <input type="tel" id="phone-input" class="phone-input" placeholder="Mobile Phone Number" maxlength="8">
+                                    </div>
+                                </div>
+
+                                <!-- Number Selection -->
+                                <div class="number-selection">
+                                    <h4 class="selection-title">WHAT ARE YOUR 3 LUCKY NUMBERS?</h4>
+                                    <button class="random-btn" onclick="randomPick()">
+                                        <i data-lucide="shuffle" class="shuffle-icon"></i>
+                                        RANDOM PICKS
+                                    </button>
+
+                                    <!-- Selected Numbers Display -->
+                                    <div class="selected-numbers">
+                                        <div class="selected-number empty" id="selected-0">?</div>
+                                        <div class="selected-number empty" id="selected-1">?</div>
+                                        <div class="selected-number empty" id="selected-2">?</div>
+                                    </div>
+
+                                    <!-- Number Grid -->
+                                    <div class="number-grid" id="number-grid">
+                                        <!-- Numbers 0-9 will be generated by JavaScript -->
+                                    </div>
+
+                                    <!-- Clear Button -->
+                                    <button class="clear-btn hidden" id="clear-btn" onclick="clearSelection()">
+                                        Clear Selection
+                                    </button>
+                                </div>
+
+                                <!-- Stake Section -->
+                                <div class="stake-section">
+                                    <label class="input-label">YOUR STAKE</label>
+                                    <div class="stake-input-wrapper">
+                                        <span class="currency">BIF</span>
+                                        <input type="number" id="stake-input" class="stake-input" value="230" min="230" onchange="updatePotentialWin()">
+                                        <span class="min-note">Min</span>
+                                    </div>
+                                    <div class="potential-win">
+                                        <span id="potential-win">BIF 6,925,184!</span>
+                                    </div>
+                                </div>
+
+                                <!-- Play Button -->
+                                <button class="play-btn disabled" id="play-btn" onclick="handlePlayGame()">
+                                    <i data-lucide="play" class="play-icon"></i>
+                                    PLAY NOW
+                                </button>
+
+                                <p class="game-disclaimer">
+                                    Must be 18+ to play. Terms and conditions apply.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW TO PLAY TAB -->
+        <section class="tab-content" id="tab-how-to-play">
+            <div class="container">
+                <div class="page-header">
+                    <h1>How to Play TatuMzuka</h1>
+                    <p>Simple steps to start winning big!</p>
+                </div>
+
+                <div class="how-to-play-content">
+                    <!-- Game Instructions -->
+                    <div class="instruction-card">
+                        <h2>Game Instructions</h2>
+                        <div class="steps-grid">
+                            <div class="step-card">
+                                <div class="step-number">1</div>
+                                <h3>Go to Lumicash</h3>
+                                <p>Go to Lumicash on your phone and select TatuMzuka</p>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-number">2</div>
+                                <h3>Pick Your Numbers</h3>
+                                <p>Choose 3 numbers from 0-9 and enter your stake amount</p>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-number">3</div>
+                                <h3>Win Big!</h3>
+                                <p>Wait for the draw and win up to 300x your stake!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Odds & Payouts Table -->
+                    <div class="odds-table-card">
+                        <h2>Odds & Payouts - Example Table</h2>
+                        <p>Every bet is split into a "hybrid bet" - 50% is bet on matching 2 numbers and 50% is bet on matching 3 numbers.</p>
+                        
+                        <div class="table-wrapper">
+                            <table class="odds-table">
+                                <thead>
+                                    <tr>
+                                        <th>YOUR BET</th>
+                                        <th>YOUR NUMBERS</th>
+                                        <th>WINNING NUMBERS</th>
+                                        <th>ODDS</th>
+                                        <th>MULTIPLIER</th>
+                                        <th>YOU WOULD WIN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>BIF 230</td>
+                                        <td>112</td>
+                                        <td>512</td>
+                                        <td>1:37</td>
+                                        <td>10x</td>
+                                        <td>BIF 2,286</td>
+                                    </tr>
+                                    <tr>
+                                        <td>BIF 2,286</td>
+                                        <td>112</td>
+                                        <td>117</td>
+                                        <td>1:37</td>
+                                        <td>10x</td>
+                                        <td>BIF 22,857</td>
+                                    </tr>
+                                    <tr>
+                                        <td>BIF 22,857</td>
+                                        <td>112</td>
+                                        <td>212</td>
+                                        <td>1:37</td>
+                                        <td>10x</td>
+                                        <td>BIF 228,571</td>
+                                    </tr>
+                                    <tr class="jackpot-row">
+                                        <td>BIF 230</td>
+                                        <td>121</td>
+                                        <td>121</td>
+                                        <td>1:1000</td>
+                                        <td>300x</td>
+                                        <td>BIF 68,571</td>
+                                    </tr>
+                                    <tr class="jackpot-row">
+                                        <td>BIF 2,286</td>
+                                        <td>112</td>
+                                        <td>112</td>
+                                        <td>1:1000</td>
+                                        <td>300x</td>
+                                        <td>BIF 685,714</td>
+                                    </tr>
+                                    <tr class="jackpot-row">
+                                        <td>BIF 22,857</td>
+                                        <td>211</td>
+                                        <td>211</td>
+                                        <td>1:1000</td>
+                                        <td>300x</td>
+                                        <td>BIF 6,857,143</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other tabs will be similar professional layouts -->
+        <!-- CONTACT TAB -->
+        <section class="tab-content" id="tab-contact">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Contact Us</h1>
+                    <p>Get in touch with our support team</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-card">
+                        <h3>Customer Support</h3>
+                        <p>Email: support@tatumzuka.com</p>
+                        <p>Phone: +257 123 456 789</p>
+                        <p>Hours: 24/7 Support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Continue with other tabs... -->
+        <!-- I'll add the rest in the next section -->
+        
+    </main>
+
+    <!-- PIN Input Modal -->
+    <div class="modal" id="pin-modal">
+        <div class="modal-overlay" onclick="closePinModal()"></div>
+        <div class="modal-content pin-modal-content">
+            <div class="modal-header">
+                <h3>Enter LuminCash PIN</h3>
+                <button class="modal-close" onclick="closePinModal()">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Please enter your 4-digit LuminCash PIN to complete the transaction</p>
+                <div class="pin-inputs">
+                    <input type="password" class="pin-input" maxlength="1" id="pin-1">
+                    <input type="password" class="pin-input" maxlength="1" id="pin-2">
+                    <input type="password" class="pin-input" maxlength="1" id="pin-3">
+                    <input type="password" class="pin-input" maxlength="1" id="pin-4">
+                </div>
+                <div class="transaction-details">
+                    <div class="detail-row">
+                        <span>Amount:</span>
+                        <span id="transaction-amount">BIF 230</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Numbers:</span>
+                        <span id="transaction-numbers">1-2-3</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Phone:</span>
+                        <span id="transaction-phone">+257 12345678</span>
+                    </div>
+                </div>
+                <button class="confirm-btn" onclick="confirmTransaction()">
+                    <i data-lucide="check-circle"></i>
+                    Confirm Payment
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
