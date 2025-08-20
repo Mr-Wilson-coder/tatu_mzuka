@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.5.3/build/css/intlTelInput.css" />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.5.3/build/js/intlTelInput.min.js"></script>
 </head>
 <body>
     <!-- Professional Header -->
@@ -31,15 +33,14 @@
 
                 <!-- Navigation -->
                 <nav class="nav-menu">
-                    <a href="#" class="nav-link active" onclick="switchTab('home')">HOME</a>
-                    <a href="#" class="nav-link" onclick="switchTab('how-to-play')">HOW TO PLAY</a>
-                    <a href="#" class="nav-link" onclick="switchTab('contact')">CONTACT</a>
-                    <a href="#" class="nav-link" onclick="switchTab('about')">ABOUT</a>
-                    <a href="#" class="nav-link" onclick="switchTab('winners')">WINNERS</a>
-                    <a href="#" class="nav-link" onclick="switchTab('results')">RESULTS</a>
-                    <a href="#" class="nav-link" onclick="switchTab('terms')">TERMS</a>
-                    <a href="#" class="nav-link nav-login" onclick="switchTab('login')">LOGIN</a>
-                    <a href="#" class="nav-link nav-signup" onclick="switchTab('signup')">SIGN UP</a>
+                    <a href="index.html" class="nav-link active" onclick="switchTab('home')">HOME</a>
+                    <a href="how-to-play.html" class="nav-link" onclick="switchTab('how-to-play')">HOW TO PLAY</a>
+                    <a href="contact.html" class="nav-link" onclick="switchTab('contact')">CONTACT</a>
+                    <a href="winners.html" class="nav-link" onclick="switchTab('winners')">WINNERS</a>
+                    <a href="results.html" class="nav-link" onclick="switchTab('results')">RESULTS</a>
+                    <a href="terms.html" class="nav-link" onclick="switchTab('terms')">TERMS</a>
+                    <a href="login.html" class="nav-link nav-login" onclick="switchTab('login')">LOGIN</a>
+                    <a href="signup.html" class="nav-link nav-signup" onclick="switchTab('signup')">SIGN UP</a>
                 </nav>
 
                 <!-- Mobile Menu Toggle -->
@@ -54,7 +55,6 @@
                 <a href="#" class="mobile-nav-link active" onclick="switchTab('home')">HOME</a>
                 <a href="#" class="mobile-nav-link" onclick="switchTab('how-to-play')">HOW TO PLAY</a>
                 <a href="#" class="mobile-nav-link" onclick="switchTab('contact')">CONTACT</a>
-                <a href="#" class="mobile-nav-link" onclick="switchTab('about')">ABOUT</a>
                 <a href="#" class="mobile-nav-link" onclick="switchTab('winners')">WINNERS</a>
                 <a href="#" class="mobile-nav-link" onclick="switchTab('results')">RESULTS</a>
                 <a href="#" class="mobile-nav-link" onclick="switchTab('terms')">TERMS</a>
@@ -86,8 +86,8 @@
                             <div class="game-badge">
                                 <div class="game-number">3</div>
                                 <div class="game-label">
-                                    <span class="label-primary">LUCKY NUMBER</span>
-                                    <span class="label-secondary">GAME</span>
+                                    <span class="label-primary">LUCKY NUMBER GAME</span>
+                                    <span class="label-secondary">TatuMzuka is easy as 1,2,3</span>
                                 </div>
                             </div>
 
@@ -116,15 +116,31 @@
                                 </div>
                             </div>
 
-                            <!-- Easy Steps Banner -->
-                            <div class="easy-steps-banner">
-                                <h3>It's as easy as 1-2-3! Over BIF 8,820,807,133 won so far!</h3>
-                                <div class="steps-indicators">
-                                    <div class="step-indicator">1</div>
-                                    <div class="step-line"></div>
-                                    <div class="step-indicator">2</div>
-                                    <div class="step-line"></div>
-                                    <div class="step-indicator">3</div>
+                            <!-- How to Play Section -->
+                            <div class="how-to-play-preview">
+                                <h3>How to Play TatuMzuka</h3>
+                                <div class="steps-preview">
+                                    <div class="step-preview">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Choose Your Numbers</h4>
+                                            <p>Pick 3 lucky numbers from 0-9</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-preview">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Place Your Bet</h4>
+                                            <p>Enter your stake (min 230 BIF)</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-preview">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Wait for Results</h4>
+                                            <p>Draws happen every 30 minutes</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -145,10 +161,7 @@
                                 <!-- Phone Number Input -->
                                 <div class="phone-section">
                                     <label class="input-label">Mobile Phone Number</label>
-                                    <div class="phone-input-wrapper">
-                                        <span class="country-code">+257</span>
-                                        <input type="tel" id="phone-input" class="phone-input" placeholder="Mobile Phone Number" maxlength="8">
-                                    </div>
+                                    <input id="phone-input" type="tel" placeholder="Enter phone number">
                                 </div>
 
                                 <!-- Number Selection -->
@@ -186,7 +199,7 @@
                                         <span class="min-note">Min</span>
                                     </div>
                                     <div class="potential-win">
-                                        <span id="potential-win">BIF 6,925,184!</span>
+                                        Potential Win: <span id="potential-win">BIF 69,000</span>
                                     </div>
                                 </div>
 
@@ -206,174 +219,122 @@
             </div>
         </section>
 
-        <!-- HOW TO PLAY TAB -->
-        <section class="tab-content" id="tab-how-to-play">
-            <div class="container">
-                <div class="page-header">
-                    <h1>How to Play TatuMzuka</h1>
-                    <p>Simple steps to start winning big!</p>
-                </div>
-
-                <div class="how-to-play-content">
-                    <!-- Game Instructions -->
-                    <div class="instruction-card">
-                        <h2>Game Instructions</h2>
-                        <div class="steps-grid">
-                            <div class="step-card">
-                                <div class="step-number">1</div>
-                                <h3>Go to Lumicash</h3>
-                                <p>Go to Lumicash on your phone and select TatuMzuka</p>
-                            </div>
-                            <div class="step-card">
-                                <div class="step-number">2</div>
-                                <h3>Pick Your Numbers</h3>
-                                <p>Choose 3 numbers from 0-9 and enter your stake amount</p>
-                            </div>
-                            <div class="step-card">
-                                <div class="step-number">3</div>
-                                <h3>Win Big!</h3>
-                                <p>Wait for the draw and win up to 300x your stake!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Odds & Payouts Table -->
-                    <div class="odds-table-card">
-                        <h2>Odds & Payouts - Example Table</h2>
-                        <p>Every bet is split into a "hybrid bet" - 50% is bet on matching 2 numbers and 50% is bet on matching 3 numbers.</p>
-                        
-                        <div class="table-wrapper">
-                            <table class="odds-table">
-                                <thead>
-                                    <tr>
-                                        <th>YOUR BET</th>
-                                        <th>YOUR NUMBERS</th>
-                                        <th>WINNING NUMBERS</th>
-                                        <th>ODDS</th>
-                                        <th>MULTIPLIER</th>
-                                        <th>YOU WOULD WIN</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>BIF 230</td>
-                                        <td>112</td>
-                                        <td>512</td>
-                                        <td>1:37</td>
-                                        <td>10x</td>
-                                        <td>BIF 2,286</td>
-                                    </tr>
-                                    <tr>
-                                        <td>BIF 2,286</td>
-                                        <td>112</td>
-                                        <td>117</td>
-                                        <td>1:37</td>
-                                        <td>10x</td>
-                                        <td>BIF 22,857</td>
-                                    </tr>
-                                    <tr>
-                                        <td>BIF 22,857</td>
-                                        <td>112</td>
-                                        <td>212</td>
-                                        <td>1:37</td>
-                                        <td>10x</td>
-                                        <td>BIF 228,571</td>
-                                    </tr>
-                                    <tr class="jackpot-row">
-                                        <td>BIF 230</td>
-                                        <td>121</td>
-                                        <td>121</td>
-                                        <td>1:1000</td>
-                                        <td>300x</td>
-                                        <td>BIF 68,571</td>
-                                    </tr>
-                                    <tr class="jackpot-row">
-                                        <td>BIF 2,286</td>
-                                        <td>112</td>
-                                        <td>112</td>
-                                        <td>1:1000</td>
-                                        <td>300x</td>
-                                        <td>BIF 685,714</td>
-                                    </tr>
-                                    <tr class="jackpot-row">
-                                        <td>BIF 22,857</td>
-                                        <td>211</td>
-                                        <td>211</td>
-                                        <td>1:1000</td>
-                                        <td>300x</td>
-                                        <td>BIF 6,857,143</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Other tabs will be similar professional layouts -->
-        <!-- CONTACT TAB -->
-        <section class="tab-content" id="tab-contact">
-            <div class="container">
-                <div class="page-header">
-                    <h1>Contact Us</h1>
-                    <p>Get in touch with our support team</p>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-card">
-                        <h3>Customer Support</h3>
-                        <p>Email: support@tatumzuka.com</p>
-                        <p>Phone: +257 123 456 789</p>
-                        <p>Hours: 24/7 Support</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Continue with other tabs... -->
-        <!-- I'll add the rest in the next section -->
-        
-    </main>
-
-    <!-- PIN Input Modal -->
-    <div class="modal" id="pin-modal">
-        <div class="modal-overlay" onclick="closePinModal()"></div>
-        <div class="modal-content pin-modal-content">
+    <!-- Confirm Bet Modal -->
+    <div class="modal-overlay" id="confirm-modal">
+        <div class="modal">
             <div class="modal-header">
-                <h3>Enter LuminCash PIN</h3>
-                <button class="modal-close" onclick="closePinModal()">
+                <h3>Confirm Your Bet</h3>
+                <button class="modal-close" onclick="closeConfirmModal()">
                     <i data-lucide="x"></i>
                 </button>
             </div>
-            <div class="modal-body">
-                <p>Please enter your 4-digit LuminCash PIN to complete the transaction</p>
-                <div class="pin-inputs">
-                    <input type="password" class="pin-input" maxlength="1" id="pin-1">
-                    <input type="password" class="pin-input" maxlength="1" id="pin-2">
-                    <input type="password" class="pin-input" maxlength="1" id="pin-3">
-                    <input type="password" class="pin-input" maxlength="1" id="pin-4">
-                </div>
-                <div class="transaction-details">
+            <div class="modal-content">
+                <div class="bet-details">
                     <div class="detail-row">
-                        <span>Amount:</span>
-                        <span id="transaction-amount">BIF 230</span>
+                        <span>Phone Number:</span>
+                        <span id="confirm-phone">+257 12345678</span>
                     </div>
                     <div class="detail-row">
-                        <span>Numbers:</span>
-                        <span id="transaction-numbers">1-2-3</span>
+                        <span>Selected Numbers:</span>
+                        <span id="confirm-numbers">1-2-3</span>
                     </div>
                     <div class="detail-row">
-                        <span>Phone:</span>
-                        <span id="transaction-phone">+257 12345678</span>
+                        <span>Stake Amount:</span>
+                        <span id="confirm-stake">BIF 230</span>
+                    </div>
+                    <div class="detail-row highlight">
+                        <span>Potential Winnings:</span>
+                        <span id="confirm-winnings">BIF 69,000</span>
                     </div>
                 </div>
-                <button class="confirm-btn" onclick="confirmTransaction()">
-                    <i data-lucide="check-circle"></i>
-                    Confirm Payment
-                </button>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel" onclick="closeConfirmModal()">Cancel</button>
+                <button class="modal-btn confirm" onclick="proceedToPIN()">OK - Proceed</button>
             </div>
         </div>
     </div>
+
+    <!-- PIN Modal -->
+    <div class="modal-overlay" id="pin-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Enter Your PIN</h3>
+                <div class="pin-subtitle">Enter your 4-digit  PIN</div>
+            </div>
+            <div class="modal-content">
+                <div class="transaction-details">
+                    <p>Amount: <span id="transaction-amount">BIF 230</span></p>
+                    <p>Numbers: <span id="transaction-numbers">1-2-3</span></p>
+                    <p>Phone: <span id="transaction-phone">+257 12345678</span></p>
+                </div>
+                <div class="pin-inputs">
+                    <input type="text" class="pin-input" id="pin-1" maxlength="1">
+                    <input type="text" class="pin-input" id="pin-2" maxlength="1">
+                    <input type="text" class="pin-input" id="pin-3" maxlength="1">
+                    <input type="text" class="pin-input" id="pin-4" maxlength="1">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel" onclick="closePinModal()">Cancel</button>
+                <button class="modal-btn confirm" onclick="confirmTransaction()">Confirm Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal success">
+            <div class="modal-content">
+                <div class="success-icon">
+                    <i data-lucide="check-circle"></i>
+                </div>
+                <h3>Bet Placed Successfully!</h3>
+                <div class="success-details">
+                    <p>Your bet has been confirmed</p>
+                    <div class="success-numbers" id="success-numbers">Numbers: 1-2-3</div>
+                    <div class="success-amount" id="success-amount">Stake: BIF 230</div>
+                    <div class="success-winnings" id="success-winnings">Potential Win: BIF 69,000</div>
+                </div>
+                <p class="draw-reminder">Next draw in <span id="success-timer">11:39</span> - Good luck!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn confirm" onclick="closeSuccessModal()">Continue Playing</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>TatuMzuka</h3>
+                    <p>Burundi's premier lottery platform. Play responsibly and win big!</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" onclick="switchTab('home')">Home</a></li>
+                        <li><a href="#" onclick="switchTab('results')">Results</a></li>
+                        <li><a href="#" onclick="switchTab('winners')">Winners</a></li>
+                        <li><a href="#" onclick="switchTab('how-to-play')">How to Play</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#" onclick="switchTab('terms')">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Responsible Gaming</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TatuMzuka. All rights reserved. Play responsibly.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

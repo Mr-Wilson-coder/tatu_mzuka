@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play - TatuMzuka Lottery</title>
+    <meta name="description" content="Learn how to play TatuMzuka lottery. Simple steps to pick numbers, place bets, and win big prizes.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+                            400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+                            800: '#075985', 900: '#1e3a8a',
+                        },
+                        accent: {
+                            50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d',
+                            400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 700: '#b45309',
+                            800: '#92400e', 900: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="relative z-50 bg-gray-800 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <h2 class="text-3xl font-display font-bold text-primary-400">TatuMzuka</h2>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">HOME</a>
+                        <a href="results.html" class="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">RESULTS</a>
+                        <a href="winners.html" class="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">WINNERS</a>
+                        <a href="how-to-play.html" class="text-white bg-primary-500 hover:bg-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">HOW TO PLAY</a>
+                        <a href="terms.html" class="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">TERMS</a>
+                        <a href="contact.html" class="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">CONTACT</a>
+                    </div>
+                </div>
+                <button class="md:hidden text-gray-300" aria-label="Open mobile menu" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav hidden bg-gray-800 rounded-xl p-4 mt-2 md:hidden" id="mobile-nav">
+        <a href="index.html" class="block text-gray-300 hover:text-primary-400 py-2">HOME</a>
+        <a href="results.html" class="block text-gray-300 hover:text-primary-400 py-2">RESULTS</a>
+        <a href="winners.html" class="block text-gray-300 hover:text-primary-400 py-2">WINNERS</a>
+        <a href="how-to-play.html" class="block text-gray-300 hover:text-primary-400 py-2">HOW TO PLAY</a>
+        <a href="terms.html" class="block text-gray-300 hover:text-primary-400 py-2">TERMS</a>
+        <a href="contact.html" class="block text-gray-300 hover:text-primary-400 py-2">CONTACT</a>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-10 text-center py-20 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-display font-bold text-white mb-6">How to Play</h1>
+            <p class="text-2xl text-gray-300">Learn how to play TatuMzuka and start winning today!</p>
+        </div>
+    </header>
+
+    <!-- Game Overview -->
+    <section class="relative z-10 py-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-800 rounded-3xl p-8 shadow-lg mb-8">
+                <div class="text-center mb-8">
+                    <div class="bg-accent-500 text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
+                        3
+                    </div>
+                    <h2 class="text-3xl font-display font-bold text-primary-400 mb-4">Lucky 3 Numbers Game</h2>
+                    <p class="text-lg text-gray-300">Pick 3 numbers from 0-9 and win up to 300x your bet!</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-clock text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-primary-400 mb-2">Every 30 Minutes</h3>
+                        <p class="text-gray-300">Draws happen 24/7</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-coins text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-primary-400 mb-2">BIF 230 Minimum</h3>
+                        <p class="text-gray-300">Low entry cost</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-trophy text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-primary-400 mb-2">Up to 300x</h3>
+                        <p class="text-gray-300">Maximum multiplier</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Play Steps -->
+    <section class="relative z-10 py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-display font-bold text-primary-400 text-center mb-12">How to Play - It's Easy!</h2>
+            
+            <div class="space-y-8">
+                <!-- Step 1 -->
+                <div class="bg-gray-800 rounded-3xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-accent-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mr-6">
+                            1
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-primary-400">Go to Lumicash</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-300 text-lg mb-4">Open the Lumicash app on your phone and select <strong class="text-primary-400">TatuMzuka</strong> from the merchant list.</p>
+                            <div class="bg-accent-50 rounded-xl p-4">
+                                <p class="text-accent-700 font-medium">💡 Tip: You can find TatuMzuka under "Games & Entertainment" section</p>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-gray-700 to-gray-800 rounded-xl p-6 text-center">
+                            <i class="fas fa-mobile-alt text-6xl text-primary-400 mb-4"></i>
+                            <p class="text-gray-300">Open Lumicash App</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-gray-800 rounded-3xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mr-6">
+                            2
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-primary-400">Enter Your Lucky Numbers</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-300 text-lg mb-4">Enter your 3 lucky numbers from 0-9 followed by <strong class="text-primary-400">WEB</strong> in the account name section.</p>
+                            <div class="bg-blue-50 rounded-xl p-4">
+                                <p class="text-blue-700 font-medium">📝 Example: 637 WEB</p>
+                                <p class="text-gray-600 text-sm mt-2">This means your numbers are 6, 3, and 7</p>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl p-6 text-center">
+                            <div class="flex justify-center space-x-2 mb-4">
+                                <div class="bg-blue-500 text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-lg">6</div>
+                                <div class="bg-blue-500 text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-lg">3</div>
+                                <div class="bg-blue-500 text-white w-12 h-12 rounded-lg flex items-center justify-center font-bold text-lg">7</div>
+                            </div>
+                            <p class="text-gray-300">Your Lucky Numbers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-gray-800 rounded-3xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mr-6">
+                            3
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-primary-400">Choose Your Bet Amount</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-300 text-lg mb-4">Enter your bet amount. The minimum is <strong class="text-primary-400">BIF 230</strong> and maximum is <strong class="text-primary-400">BIF 23,083</strong>.</p>
+                            <div class="bg-green-50 rounded-xl p-4">
+                                <p class="text-green-700 font-medium">💰 Higher bets = Higher prizes!</p>
+                                <p class="text-gray-600 text-sm mt-2">Win up to 300x your bet amount</p>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-green-700 to-green-800 rounded-xl p-6 text-center">
+                            <i class="fas fa-coins text-6xl text-primary-400 mb-4"></i>
+                            <p class="text-gray-300">Min: BIF 230 • Max: BIF 23,083</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prize Structure -->
+    <section class="relative z-10 py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-display font-bold text-primary-400 text-center mb-12">Prize Structure</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 rounded-3xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-display font-bold text-primary-400 mb-6 text-center">Winning Combinations</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-green-700 to-green-800 rounded-xl p-6 flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-primary-400 text-lg">3 Numbers Match (Exact Order)</h4>
+                                <p class="text-gray-300">All 3 numbers in exact sequence</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-green-400 font-bold text-2xl">300x</p>
+                                <p class="text-gray-300 text-sm">Your Bet</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl p-6 flex items-center justify-between">
+                            <div>
+                                <h4 class="font-bold text-primary-400 text-lg">2 Numbers Match (Exact Order)</h4>
+                                <p class="text-gray-300">First 2 or last 2 numbers match</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-blue-400 font-bold text-2xl">10x</p>
+                                <p class="text-gray-300 text-sm">Your Bet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 rounded-3xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-display font-bold text-primary-400 mb-6 text-center">Example Winnings</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-accent-700 to-accent-800 rounded-xl p-6">
+                            <h4 class="font-bold text-primary-400 mb-2">If you bet BIF 1,000:</h4>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex justify-between">
+                                    <span>3 numbers match:</span>
+                                    <strong class="text-green-400">BIF 300,000</strong>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>2 numbers match:</span>
+                                    <strong class="text-blue-400">BIF 10,000</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-purple-700 to-purple-800 rounded-xl p-6">
+                            <h4 class="font-bold text-primary-400 mb-2">Maximum Prize (BIF 23,083 bet):</h4>
+                            <p class="text-3xl font-bold text-purple-400 text-center">BIF 6,925,184</p>
+                            <p class="text-center text-gray-300 text-sm">Life-changing money!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Information -->
+    <section class="relative z-10 py-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-800 rounded-3xl p-8 shadow-lg">
+                <h3 class="text-2xl font-display font-bold text-primary-400 mb-6 text-center">Important Information</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-primary-400 mb-4 flex items-center">
+                            <i class="fas fa-clock text-accent-500 mr-2"></i>
+                            Draw Schedule
+                        </h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• Draws every 30 minutes</li>
+                            <li>• 24 hours a day, 7 days a week</li>
+                            <li>• Results announced immediately</li>
+                            <li>• Next draw countdown shown on website</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-primary-400 mb-4 flex items-center">
+                            <i class="fas fa-gift text-green-500 mr-2"></i>
+                            Winning & Payouts
+                        </h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• SMS notification when you win</li>
+                            <li>• Automatic payout to your account</li>
+                            <li>• No waiting - instant payouts</li>
+                            <li>• All winnings tax-free</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-gradient-to-r from-red-700 to-red-800 rounded-xl p-6">
+                    <h4 class="font-bold text-red-400 mb-3 flex items-center">
+                        <i class="fas fa-exclamation-triangle text-red-500 mr-2"></i>
+                        Responsible Gaming
+                    </h4>
+                    <p class="text-red-400">Please play responsibly. Only bet what you can afford to lose. If you feel you have a gambling problem, please seek help.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="relative z-10 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-gray-800 rounded-3xl p-8 shadow-lg">
+                <h2 class="text-3xl font-display font-bold text-primary-400 mb-4">Ready to Play?</h2>
+                <p class="text-gray-300 text-lg mb-8">Now that you know how to play, pick your lucky numbers and start winning!</p>
+                <a href="index.html" class="inline-block bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-play mr-2"></i>
+                    Start Playing Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-display font-bold text-primary-400">TatuMzuka</h3>
+                    <p class="text-gray-300">Burundia's premier lottery platform. Play responsibly and win big!</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-primary-400">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-primary-400 transition-colors">Home</a></li>
+                        <li><a href="results.html" class="text-gray-300 hover:text-primary-400 transition-colors">Results</a></li>
+                        <li><a href="winners.html" class="text-gray-300 hover:text-primary-400 transition-colors">Winners</a></li>
+                        <li><a href="how-to-play.html" class="text-gray-300 hover:text-primary-400 transition-colors">How to Play</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold text-primary-400">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="terms.html" class="text-gray-300 hover:text-primary-400 transition-colors">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-primary-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 TatuMzuka. All rights reserved. Play responsibly.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
