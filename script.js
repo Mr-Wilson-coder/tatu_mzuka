@@ -820,3 +820,27 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+function showSignup() {
+    document.getElementById('signupOverlay').style.display = 'flex';
+}
+
+function hideSignup() {
+    document.getElementById('signupOverlay').style.display = 'none';
+}
+
+function handleSignup(event) {
+    event.preventDefault(); // Prevent form submission
+    
+    const password = document.getElementById('signup-password').value;
+    const confirmPassword = document.getElementById('signup-confirm').value;
+    
+    if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+    }
+    
+    // Simulate successful signup
+    alert("Account created successfully!");
+    hideSignup(); // Hide the signup overlay after successful signup
+}
